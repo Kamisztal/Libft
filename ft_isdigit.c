@@ -16,3 +16,20 @@ int ft_isdigit(int c)
         return (1);
     return (0);
 }
+
+/*
+#include <stdio.h>
+
+int main(int ac, char **av)
+{
+    int res;
+
+    (void)ac;
+    res = ft_isdigit(av[1][0]);
+    if (res == 1)
+        printf("is digit");
+    else
+        printf("is not digit");
+    return (0);
+}
+*/

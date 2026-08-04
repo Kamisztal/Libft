@@ -1,35 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmisztal <patrick.misztal@learner.42.te    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/02 18:22:51 by pmisztal          #+#    #+#             */
-/*   Updated: 2026/08/02 18:22:51 by pmisztal         ###   ########.fr       */
+/*   Created: 2026/08/04 14:04:18 by pmisztal          #+#    #+#             */
+/*   Updated: 2026/08/04 14:04:18 by pmisztal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+#include <stddef.h>
+
+void *ft_memchr(const void *s, int c, size_t n)
 {
-    if (c >= 32 && c <= 126)
-        return (1);
-    return (0);
+    size_t i;
+    unsigned char *ptr;
+
+    ptr = (unsigned char *)s;
+    i = 0;
+    while (i < n)
+    {
+        if (ptr[i] == c)
+            return (&ptr[i]);
+        i++;
+    }
+    return (NULL);
 }
 
-/*
+
 #include <stdio.h>
 
-int main(int ac, char **av)
+int main(void)
 {
-    int res;
+    char buffer[10] = "XavierNiel";
+    char *res;
 
-    (void)ac;
-    res = ft_isalnum(av[1][0]);
-    if (res == 1)
-        printf("is printable");
-    else
-        printf("is not printable");
+    res = ft_memchr(buffer, 'N', 10);
+    if (res != NULL)
+        printf("%ld\n", res - buffer);
     return (0);
 }
-*/

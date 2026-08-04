@@ -19,3 +19,15 @@ int ft_tolower(int c)
     }
     return (c);
 }
+
+#include <stdio.h>
+
+int main(int ac, char **av)
+{
+    int res;
+
+    (void)ac;
+    res = ft_tolower(av[1][0]);
+    printf("%c\n", res);
+    return (0);
+}

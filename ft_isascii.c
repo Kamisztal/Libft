@@ -16,3 +16,18 @@ int ft_isascii(int c)
         return (1);
     return (0);
 }
+
+#include <stdio.h>
+
+int main(int ac, char **av)
+{
+    int res;
+
+    (void)ac;
+    res = ft_isascii(av[1][0]);
+    if (res == 1)
+        printf("is ascii");
+    else
+        printf("is not ascii");
+    return (0);
+}

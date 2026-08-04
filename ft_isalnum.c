@@ -17,3 +17,19 @@ int ft_isalnum(int c)
         return (1);
     return (0);
 }
+
+
+#include <stdio.h>
+
+int main(int ac, char **av)
+{
+    int res;
+
+    (void)ac;
+    res = ft_isalnum(av[1][0]);
+    if (res == 1)
+        printf("is alnum");
+    else
+        printf("is not alnum");
+    return (0);
+}

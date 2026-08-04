@@ -30,9 +30,10 @@ void *ft_memset(void *s, int c, size_t n)
 
 /*
 #include <stdio.h>
+
 int main(void)
 {
-    char buffer[11] = "42liblfwfef";
+    char buffer[11] = "aaaaaaaaaaa";
  
     ft_memset(buffer, 'A', 11);
     printf("%s\n", buffer);

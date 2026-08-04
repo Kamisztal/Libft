@@ -1,35 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmisztal <patrick.misztal@learner.42.te    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/02 18:22:51 by pmisztal          #+#    #+#             */
-/*   Updated: 2026/08/02 18:22:51 by pmisztal         ###   ########.fr       */
+/*   Created: 2026/08/04 16:21:43 by pmisztal          #+#    #+#             */
+/*   Updated: 2026/08/04 16:21:43 by pmisztal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+#include <stddef.h>
+
+void ft_bzero(void *s, size_t n)
 {
-    if (c >= 32 && c <= 126)
-        return (1);
-    return (0);
+    unsigned char *ptr;
+    size_t i;
+
+    ptr = (unsigned char *)s;
+    i = 0;
+    while (i < n)
+    {
+        ptr[i] = '\0';
+        i++;
+    }
 }
 
 /*
 #include <stdio.h>
 
-int main(int ac, char **av)
+int main(void)
 {
-    int res;
-
-    (void)ac;
-    res = ft_isalnum(av[1][0]);
-    if (res == 1)
-        printf("is printable");
-    else
-        printf("is not printable");
+    char buffer[11] = "aaaaaaaaaaa";
+ 
+    ft_bzero(buffer, 11);
+    printf("%s\n", buffer);
     return (0);
 }
 */

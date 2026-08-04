@@ -19,3 +19,17 @@ int ft_toupper(int c)
     }
     return (c);
 }
+
+/*
+#include <stdio.h>
+
+int main(int ac, char **av)
+{
+    int res;
+
+    (void)ac;
+    res = ft_toupper(av[1][0]);
+    printf("%c\n", res);
+    return (0);
+}
+*/
