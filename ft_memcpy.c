@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmisztal <patrick.misztal@learner.42.te    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include <stddef.h>
 
-void *ft_memmove(void* dest, const void* src, size_t count )
+void *ft_memcpy(void* dest, const void* src, size_t count )
 {
     size_t i;
     unsigned char *dst;
@@ -31,12 +31,12 @@ void *ft_memmove(void* dest, const void* src, size_t count )
 
 /*
 #include <stdio.h>
-int main (void)
+int main(void)
 {
     char src[7] = "Hellooo";
     char dest[8] = "nothing";
 
-    ft_memmove(dest, src, 9);
+    ft_memcpy(dest, src, 9);
     printf("%s\n", dest);
     return (0);
 }
