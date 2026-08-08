@@ -1,34 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlen.c                                           :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pmisztal <patrick.misztal@learner.42.te    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/02 16:15:47 by pmisztal          #+#    #+#             */
-/*   Updated: 2026/08/02 16:15:47 by pmisztal         ###   ########.fr       */
+/*   Created: 2026/08/08 18:50:18 by pmisztal          #+#    #+#             */
+/*   Updated: 2026/08/08 18:50:18 by pmisztal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strlen(char *str)
+char *ft_strrchr(const char *s, int c)
 {
-    int i;
 
-    i = 0;
-    while (str[i] != '\0')
-    {
-        i++;
-    }
-    return (i);
 }
-/*
-#include <stdio.h>
-
-int main(void)
-{
-    char str[] = "hello";
- 
-    printf("%d\n", ft_strlen(str));
-    return (0);
-}
-*/
