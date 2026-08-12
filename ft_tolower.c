@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int ft_tolower(int c)
 {
     if (c >= 'A' && c <= 'Z')
@@ -20,6 +22,7 @@ int ft_tolower(int c)
     return (c);
 }
 
+/*
 #include <stdio.h>
 
 int main(int ac, char **av)
@@ -31,3 +34,4 @@ int main(int ac, char **av)
     printf("%c\n", res);
     return (0);
 }
+*/

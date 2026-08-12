@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int ft_isalnum(int c)
 {
     if ((c >= '0' && c <= '9') || ((c >= 'a' && c <= 'z') ||
@@ -18,7 +20,7 @@ int ft_isalnum(int c)
     return (0);
 }
 
-
+/*
 #include <stdio.h>
 
 int main(int ac, char **av)
@@ -33,3 +35,5 @@ int main(int ac, char **av)
         printf("is not alnum");
     return (0);
 }
+*/
+

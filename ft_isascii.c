@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int ft_isascii(int c)
 {
     if (c >= 0 && c <= 127)
@@ -17,6 +19,7 @@ int ft_isascii(int c)
     return (0);
 }
 
+/*
 #include <stdio.h>
 
 int main(int ac, char **av)
@@ -31,3 +34,4 @@ int main(int ac, char **av)
         printf("is not ascii");
     return (0);
 }
+*/
