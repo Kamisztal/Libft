@@ -21,7 +21,7 @@ void *ft_calloc(size_t count, size_t size)
     ft_memset(ptr, 0, count * size);
     return (ptr);
 }
-
+/*
 #include <stdio.h>
 
 int main(void)
@@ -33,3 +33,4 @@ int main(void)
     free(tab);
     return (0);
 }
+*/
