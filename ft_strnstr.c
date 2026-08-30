@@ -47,4 +47,4 @@ int main(void)
     printf("%s\n", ft_strnstr(src, dest, 13));
     return (0);
 }
-\*
+*/
