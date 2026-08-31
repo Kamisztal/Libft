@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    if (c >= 0 && c <= 127)
-        return (1);
-    return (0);
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }
 
 /*
@@ -24,14 +24,14 @@ int ft_isascii(int c)
 
 int main(int ac, char **av)
 {
-    int res;
+	int res;
 
-    (void)ac;
-    res = ft_isascii(av[1][0]);
-    if (res == 1)
-        printf("is ascii");
-    else
-        printf("is not ascii");
-    return (0);
+	(void)ac;
+	res = ft_isascii(av[1][0]);
+	if (res == 1)
+		printf("is ascii");
+	else
+		printf("is not ascii");
+	return (0);
 }
 */
