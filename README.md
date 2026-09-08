@@ -45,7 +45,7 @@ Recoder la libc, cette lib sera utiliser dans le cadre de prochains projets en C
 - [x] `ft_strdup`
 
 
-### Fonctions additionnelles (0/11)
+### Fonctions additionnelles (4/11)
 
 - [ ] `ft_substr`
 - [ ] `ft_strjoin`
@@ -54,10 +54,10 @@ Recoder la libc, cette lib sera utiliser dans le cadre de prochains projets en C
 - [ ] `ft_itoa`
 - [ ] `ft_strmapi`
 - [ ] `ft_striteri`
-- [ ] `ft_putchar_fd`
-- [ ] `ft_putstr_fd`
-- [ ] `ft_putendl_fd`
-- [ ] `ft_putnbr_fd`
+- [x] `ft_putchar_fd`
+- [x] `ft_putstr_fd`
+- [x] `ft_putendl_fd`
+- [x] `ft_putnbr_fd`
 
 ### Listes chaînées (0/9)
 
