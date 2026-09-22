@@ -48,7 +48,7 @@ Recoder la libc, cette lib sera utiliser dans le cadre de prochains projets en C
 ### Fonctions additionnelles (4/11)
 
 - [x] `ft_substr`
-- [ ] `ft_strjoin`
+- [x] `ft_strjoin`
 - [ ] `ft_strtrim`
 - [ ] `ft_split`
 - [ ] `ft_itoa`
