@@ -49,7 +49,7 @@ Recoder la libc, cette lib sera utiliser dans le cadre de prochains projets en C
 
 - [x] `ft_substr`
 - [x] `ft_strjoin`
-- [ ] `ft_strtrim`
+- [x] `ft_strtrim`
 - [ ] `ft_split`
 - [ ] `ft_itoa`
 - [ ] `ft_strmapi`
