@@ -12,15 +12,7 @@
 
 #include "libft.h"
 
-int	is_sep(char s, char c)
-{
-	if (s == c)
-		return (0);
-	else
-		return (1);
-}
-
-int	wordcount(char *s, char c)
+static int	wordcount(char *s, char c)
 {
 	int	i;
 	int	count;
@@ -29,59 +21,80 @@ int	wordcount(char *s, char c)
 	count = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] != '\0' && is_sep(s[i], c) == 1)
+		while (s[i] != '\0' && s[i] == c)
+			i++;
+		if (s[i] != '\0')
 		{
 			count++;
-			while (s[i] != '\0' && is_sep(s[i], c) == 1)
+			while (s[i] != '\0' && s[i] != c)
 				i++;
 		}
-		while (s[i] != '\0' && is_sep(s[i], c) == 0)
-			i++;
 	}
 	return (count);
 }
 
-char	**ft_split(char const *s, char c)
+static void	free_split(char **str, int j)
 {
-	int		i;
-	int		j;
-	int		k;
-	int		debut;
-	char	**str;
+	while (j > 0)
+		free(str[--j]);
+	free(str);
+}
+
+static char	**fill_split(char **str, char const *s, char c)
+{
+	int	i;
+	int	j;
+	int	debut;
 
 	i = 0;
 	j = 0;
-	k = 0;
-	str = malloc(sizeof(char *) * (wordcount(s, c) + 1));
-	if (!str)
-		return (NULL);
 	while (s[i] != '\0')
 	{
-		if (s[i] != '\0' && is_sep(s[i], c) == 1)
-		{
-			debut = i;
-			while (s[i] != '\0' && is_sep(s[i], c) == 1)
-				i++;
-			str[j] = ft_substr(s, debut, i - debut);
-			if (str[j] == NULL)
-			{
-				while (k < j)
-				{
-					free(str[k]);
-					k++;
-				}
-				free(str);
-				return (NULL);
-			}
-			j++;
-		}
-		while (s[i] != '\0' && is_sep(s[i], c) == 0)
+		while (s[i] != '\0' && s[i] == c)
 			i++;
+		if (s[i] == '\0')
+			break ;
+		debut = i;
+		while (s[i] != '\0' && s[i] != c)
+			i++;
+		str[j] = ft_substr(s, debut, i - debut);
+		if (!str[j])
+		{
+			free_split(str, j);
+			return (NULL);
+		}
+		j++;
 	}
 	str[j] = NULL;
 	return (str);
 }
 
-int	main(void)
+char	**ft_split(char const *s, char c)
 {
+	char	**str;
+
+	str = malloc(sizeof(char *) * (wordcount((char *)s, c) + 1));
+	if (!str)
+		return (NULL);
+	return (fill_split(str, s, c));
 }
+/*
+#include <stdio.h>
+
+int main(void)
+{
+	char	**str;
+	int i;
+
+	i = 0;
+	str = ft_split("Coucou les gens wwefw", ' ');
+	while (str[i] != NULL)
+	{
+		printf("%s\n", str[i]);
+		free(str[i]);
+		i++;
+	}
+	free(str);
+	return 0;
+}
+*/
