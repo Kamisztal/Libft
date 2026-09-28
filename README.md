@@ -45,13 +45,13 @@ Recoder la libc, cette lib sera utiliser dans le cadre de prochains projets en C
 - [x] `ft_strdup`
 
 
-### Fonctions additionnelles (4/11)
+### Fonctions additionnelles (8/11)
 
 - [x] `ft_substr`
 - [x] `ft_strjoin`
 - [x] `ft_strtrim`
-- [ ] `ft_split`
-- [ ] `ft_itoa`
+- [x] `ft_split`
+- [x] `ft_itoa`
 - [ ] `ft_strmapi`
 - [ ] `ft_striteri`
 - [x] `ft_putchar_fd`
