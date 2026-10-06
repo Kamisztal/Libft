@@ -12,11 +12,13 @@
 
 #include "libft.h"
 
+/*
 char test(unsigned int i, char c)
 {
 	(void)i;
 	return (ft_toupper(c));
 }
+*/
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
