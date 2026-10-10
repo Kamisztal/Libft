@@ -59,13 +59,13 @@ Recoder la libc, cette lib sera utiliser dans le cadre de prochains projets en C
 - [x] `ft_putendl_fd`
 - [x] `ft_putnbr_fd`
 
-### Listes chaînées (0/9)
+### Listes chaînées (5/9)
 
-- [ ] `ft_lstnew`
-- [ ] `ft_lstadd_front`
-- [ ] `ft_lstsize`
-- [ ] `ft_lstlast`
-- [ ] `ft_lstadd_back`
+- [x] `ft_lstnew`
+- [x] `ft_lstadd_front`
+- [x] `ft_lstsize`
+- [x] `ft_lstlast`
+- [x] `ft_lstadd_back`
 - [ ] `ft_lstdelone`
 - [ ] `ft_lstclear`
 - [ ] `ft_lstiter`
