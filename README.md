@@ -1,74 +1,55 @@
 # Libft
 
-![Language](https://img.shields.io/badge/language-C-blue)
-![42](https://img.shields.io/badge/42-Common%20Core-000000)
+![C](https://img.shields.io/badge/language-C-blue)
+![42](https://img.shields.io/badge/school-42-black)
+![Status](https://img.shields.io/badge/status-completed-success)
+![Functions](https://img.shields.io/badge/functions-43%2F43-success)
 
-> 🚧 **En cours**
+My own C library, written from scratch as part of the 42 Common Core.
+First project of the curriculum, and the base of all the next ones.
 
-## But
+## Goal
 
-Recoder la libc, cette lib sera utiliser dans le cadre de prochains projets en C.
+Rewrite the libc functions to understand what they really do, then add more utilities and a small linked list API. No `printf`, no `string.h`
 
-## Avancement
+## Content
 
-### Fonctions de la libc ✅ (23/23)
+**Part 1 — libc functions (23)**
+`isalpha` `isdigit` `isalnum` `isascii` `isprint` `toupper` `tolower`
+`strlen` `strchr` `strrchr` `strncmp` `strlcpy` `strlcat` `strnstr` `atoi`
+`memset` `bzero` `memcpy` `memmove` `memchr` `memcmp` `calloc` `strdup`
 
-**Classification de caractères**
-- [x] `ft_isalpha`
-- [x] `ft_isdigit`
-- [x] `ft_isalnum`
-- [x] `ft_isascii`
-- [x] `ft_isprint`
-- [x] `ft_toupper`
-- [x] `ft_tolower`
+**Part 2 — additional functions (11)**
+`substr` `strjoin` `strtrim` `split` `itoa` `strmapi` `striteri`
+`putchar_fd` `putstr_fd` `putendl_fd` `putnbr_fd`
 
-**Chaînes de caractères**
-- [x] `ft_strlen`
-- [x] `ft_strchr`
-- [x] `ft_strrchr`
-- [x] `ft_strncmp`
-- [x] `ft_strlcpy`
-- [x] `ft_strlcat`
-- [x] `ft_strnstr`
-- [x] `ft_atoi`
+**Part 3 — linked lists (9)**
+`lstnew` `lstadd_front` `lstadd_back` `lstsize` `lstlast`
+`lstdelone` `lstclear` `lstiter` `lstmap`
 
-**Mémoire**
-- [x] `ft_memset`
-- [x] `ft_bzero`
-- [x] `ft_memcpy`
-- [x] `ft_memmove`
-- [x] `ft_memchr`
-- [x] `ft_memcmp`
+## Usage
 
-**Allocation**
-- [x] `ft_calloc`
-- [x] `ft_strdup`
+```bash
+git clone https://github.com/Kamisztal/Libft.git
+cd Libft
+make
+```
 
+Then in your code:
 
-### Fonctions additionnelles ✅ (11/11)
+```c
+#include "libft.h"
+```
 
-- [x] `ft_substr`
-- [x] `ft_strjoin`
-- [x] `ft_strtrim`
-- [x] `ft_split`
-- [x] `ft_itoa`
-- [x] `ft_strmapi`
-- [x] `ft_striteri`
-- [x] `ft_putchar_fd`
-- [x] `ft_putstr_fd`
-- [x] `ft_putendl_fd`
-- [x] `ft_putnbr_fd`
+```bash
+cc main.c libft.a -o program
+```
 
-### Listes chaînées (5/9)
+## Tests
 
-- [x] `ft_lstnew`
-- [x] `ft_lstadd_front`
-- [x] `ft_lstsize`
-- [x] `ft_lstlast`
-- [x] `ft_lstadd_back`
-- [ ] `ft_lstdelone`
-- [ ] `ft_lstclear`
-- [ ] `ft_lstiter`
-- [ ] `ft_lstmap`
+Every function was tested with my own test programs, with `-fsanitize=address`
+and `valgrind` (0 leaks), and passes norminette.
 
 ---
+
+*Made by [pmisztal](https://github.com/Kamisztal).*
