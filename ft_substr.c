@@ -14,18 +14,19 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char		*str;
-	size_t		i;
+	char	*str;
+	size_t	i;
 
-	str = malloc(len + 1);
+	if (!s)
+		return (NULL);
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
+	str = malloc(sizeof(char) * (len + 1));
 	if (str == NULL)
 		return (NULL);
 	i = 0;
-	if (start > ft_strlen(s))
-	{
-		str[i] = '\0';
-		return (str);
-	}
 	while (s[start] != '\0' && i < len)
 	{
 		str[i] = s[start];

@@ -12,8 +12,6 @@
 
 #include "libft.h"
 
-#include "libft.h"
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
@@ -23,15 +21,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*str;
 
 	len = ft_strlen(s1);
-	str = malloc(len + 1);
-	if (str == NULL)
-		return (NULL);
 	debut = 0;
 	while (s1[debut] != '\0' && ft_strchr(set, s1[debut]) != NULL)
 		debut++;
 	fin = len - 1;
 	while (fin > debut && ft_strchr(set, s1[fin]) != NULL)
 		fin--;
+	str = malloc(sizeof(char) * (fin - debut + 2));
+	if (str == NULL)
+		return (NULL);
 	i = 0;
 	while (debut <= fin)
 	{
